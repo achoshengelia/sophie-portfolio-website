@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import useGlobalStore from '@/stores/global';
 import Link from 'next/link';
+import clsx from 'clsx';
+import useGlobalStore from '@/stores/global';
 import Row from './Row';
 import Column from './Column';
 
@@ -11,16 +12,18 @@ const Menu = () => {
   return (
     <Row
       as="nav"
-      className={`justify-center fixed inset-0 bg-grey z-10] ${showMenu ? '' : 'hidden'}`}
+      className={clsx('justify-center fixed inset-0 bg-grey z-10', { hidden: !showMenu })}
     >
       <Column as="ul" className="items-center">
         {navItems.map(({ name, link, secondary }) => (
           <li
             key={name}
-            className={`
-              text-[${secondary ? '26rem' : '45rem'}] 
-              font-[400] 
-              ${secondary ? 'lowercase' : 'uppercase'}`}
+            className={clsx('font-[400]', {
+              uppercase: !secondary,
+              lowercase: secondary,
+              'text-[40rem]': !secondary,
+              'text-[26rem]': secondary
+            })}
           >
             <Link href={link}>{name}</Link>
           </li>
