@@ -42,4 +42,4 @@ jobs:
           echo "✅ Passed" >> $GITHUB_STEP_SUMMARY
 
       - name: 'Compile the app'
-        run: yarn tsc
+        run: yarn build
