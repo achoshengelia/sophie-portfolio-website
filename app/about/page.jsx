@@ -3,10 +3,12 @@ export const metadata = {
   description: 'A portfolio website for Sophie Lazari'
 };
 
-export default function AboutPage() {
+const AboutPage = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="">
       <h1>About page</h1>
     </main>
   );
-}
+};
+
+export default AboutPage;
