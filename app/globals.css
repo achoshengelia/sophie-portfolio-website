@@ -23,3 +23,19 @@ html {
 body {
   font-size: 16rem;
 }
+
+.flex-row-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-col-center {
+  @apply flex flex-col justify-center items-center;
+}
+
+.hide {
+  @apply opacity-0 pointer-events-none;
+}
+
+.show {
+  @apply opacity-100 pointer-events-auto;
+}

@@ -2,19 +2,20 @@
 import React from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
-import useGlobalStore from '@/stores/global';
-import Row from './Row';
-import Column from './Column';
+import useGlobalStore from '@stores/global';
 
 const Menu = () => {
   const { showMenu } = useGlobalStore();
 
   return (
-    <Row
-      as="nav"
-      className={clsx('justify-center fixed inset-0 bg-grey z-10', { hidden: !showMenu })}
+    <nav
+      className={clsx(
+        `flex-row-center fixed inset-0 bg-grey z-10 transition-opacity ${
+          showMenu ? 'show' : 'hide'
+        }`
+      )}
     >
-      <Column as="ul" className="items-center">
+      <ul className="flex-col-center">
         {navItems.map(({ name, link, secondary }) => (
           <li
             key={name}
@@ -28,8 +29,8 @@ const Menu = () => {
             <Link href={link}>{name}</Link>
           </li>
         ))}
-      </Column>
-    </Row>
+      </ul>
+    </nav>
   );
 };
 
