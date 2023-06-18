@@ -16,6 +16,10 @@ module.exports = {
         purple: '#FF02A9',
         'light-grey': '#F5F5F5',
         grey: '#D9D9D9BF'
+      },
+      dropShadow: {
+        menubutton: '0  0 10px rgb(255 2 169 )',
+        hamburger: '0  0 25px rgb(255 2 169 )'
       }
     }
   },
