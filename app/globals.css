@@ -39,3 +39,17 @@ body {
 .show {
   @apply opacity-100 pointer-events-auto;
 }
+
+@font-face {
+  font-family: 'Sporting Grotesque_Bold';
+  src: url('../public/fonts/Sporting_Grotesque-Bold_web.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sporting Grotesque_Regular';
+  src: url('../public/fonts/Sporting_Grotesque-Regular_web.ttf') format('truetype');
+}
+
+/* .pink-text-shadow {
+  text-shadow: #ff02a9 1px 0 10px;
+} */
