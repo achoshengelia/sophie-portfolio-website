@@ -10,7 +10,10 @@ const Header = () => {
       <nav>
         <ul className="flex justify-between items-center p-[15px]">
           <li>
-            <Link href="/" className="block w-[120px] h-[110px]">
+            <Link
+              href="/"
+              className="block w-[50px] h-[50px]  sm:w-[80px] sm:h-[80px] md:w-[120px] md:h-[110px] hover:drop-shadow-hamburger"
+            >
               <Image priority src={homeIcon} alt="main logo" />
             </Link>
           </li>

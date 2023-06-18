@@ -7,13 +7,13 @@ const NavBtn = () => {
   const { showMenu, handleToggleMenu } = useGlobalStore();
 
   return (
-    <button className="flex items-center justify-center gap-[5px]" onClick={handleToggleMenu}>
+    <button className="flex items-center justify-center gap-[5px] group" onClick={handleToggleMenu}>
       {[1, 2, 3].map(i => (
         <span
           key={i}
           className={clsx(
-            `h-[22px] w-[22px] rounded-[50%] border-[2px] border-purple transition-colors 
-            ${showMenu ? 'bg-black' : 'bg-light-grey'}`
+            `h-[14px] w-[14px] rounded-[50%] border-[1px] border-purple group-hover:drop-shadow-menubutton transition-colors 
+            ${showMenu ? 'bg-black' : 'bg-light-grey'} sm:h-[22px] sm:w-[22px]`
           )}
         />
       ))}
